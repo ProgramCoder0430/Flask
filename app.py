@@ -20,4 +20,5 @@ def shall_user(username):
 @app.route("/login", methods = ["GET", "POST"])
 def login():
     if request.method == "POST":
-        username = request.form.get
+        username = request.form.get("Username")
+        return f"<p>Welcome {username}</p>"
